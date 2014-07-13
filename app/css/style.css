@@ -1,3 +1,4 @@
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
 /*top panel*/
 .top-panel {
     border-radius: 0 0 10px 10px;
@@ -8,6 +9,15 @@
 }
 .top-panel > ul > li:last-child > a {
     border-radius: 0 0 10px 0;
+}
+.top-panel > ul > li.has-sub:hover:after {
+    border-bottom: 10px solid #6C6C6C;
+}
+.top-panel .has-sub ul {
+    top: 100%;
+}
+.top-panel .has-sub ul li a {
+    border-bottom: 1px dotted #E2DDE7;
 }
 /*bottom panel*/
 .bottom-panel {
@@ -20,6 +30,16 @@
 .bottom-panel > ul > li:last-child > a {
     border-radius: 0 10px 0 0;
     border-radius: 0 10px 0 0;
+}
+.bottom-panel > ul > li.has-sub:hover:after {
+    top: 0px;
+    border-top: 10px solid #6C6C6C;
+}
+.bottom-panel .has-sub ul {
+    bottom: 100%;
+}
+.bottom-panel .has-sub ul li a {
+    border-top: 1px dotted #E2DDE7;
 }
 /*panel*/
 .panel {
@@ -68,21 +88,6 @@
     display: inline-flex;
     margin: 0;
 }
-.panel.align-center {
-    text-align: center;
-}
-.panel.align-center > ul > li {
-    float: none;
-}
-.panel.align-center ul ul {
-    text-align: left;
-}
-.panel.align-right > ul {
-    float: right;
-}
-.panel.align-right ul ul {
-    text-align: right;
-}
 .panel > ul > li > a {
     color: #ffffff;
     font-size: 12px;
@@ -92,17 +97,12 @@
     display: block;
     width: 0;
     height: 0;
-    position: absolute;
     left: 50%;
-    bottom: 0;
-    border-bottom: 10px solid #6C6C6C;
+    position: absolute;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     margin-left: -10px;
-}
-.panel.align-right > ul > li:first-child > a,
-.panel.align-center > ul > li:first-child > a {
-    border-radius: 0;
+    bottom: 0;
 }
 .panel > ul > li.active > a,
 .panel > ul > li:hover > a {
@@ -119,19 +119,13 @@
     display: none;
     position: absolute;
     width: 150px;
-    top: 100%;
     left: 0;
-}
-.panel.align-right .has-sub ul {
-    left: auto;
-    right: 0;
 }
 .panel .has-sub ul li {
     *margin-bottom: -1px;
 }
 .panel .has-sub ul li a {
     background: #6C6C6C;
-    border-bottom: 1px dotted #E2DDE7;
     font-size: 11px;
     filter: none;
     display: block;
@@ -145,34 +139,44 @@
 .panel ul ul li:hover > a {
     color: #6C6C6C;
 }
-.panel .has-sub .has-sub:hover > ul {
-    display: block;
-}
-.panel .has-sub .has-sub ul {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-}
-.panel.align-right .has-sub .has-sub ul,
-.panel.align-right ul ul ul {
-    left: auto;
-    right: 100%;
-}
-.panel .has-sub .has-sub ul li a {
-    background: #525252;
-    border-bottom: 1px dotted #868686;
-}
-.panel .has-sub .has-sub ul li a:hover {
-    background: #464646;
-}
 /*general*/
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 body{
+    min-width: 400px;
     background-color: #A39FA8;
 }
 /*Main window*/
 
 .main-window {
     text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.central-panel{
+    display: inline-block;
+    height: calc(100% - 104px);
+    width: 100%;
+}
+.color-holder {
+    height: 60%;
+    width: 100%;
+    text-align: center;
+}
+.color{
+    display: inline-block;
+    width: 90%;
+    height: 100%;
+}
+.color-caption {
+    width: 100%;
+    height: 20%;
+}
+.separator {
+    display: inline-block;
+    height: 5%;
     width: 100%;
 }

@@ -4,11 +4,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Color Upgrader</title>
-    <link rel="stylesheet" href="http://reset5.googlecode.com/hg/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body ng-keydown="keyPress($event);" ng-keyup="keyRelease($event);" tabindex="0">
     <div class="main-window">
         <div class="panel top-panel">
             <ul>
@@ -20,9 +19,7 @@
                 </li>
                 <li class='has-sub'><a href='#'><span>Color Set</span></a>
                     <ul>
-                        <li><a href='#'><span>Rainbow</span></a>
-                        </li>
-                        <li class='last'><a href='#'><span>Extreme</span></a>
+                        <li ng-repeat="colorSet in colorSets"><a href='#' ng-click="selectSet($index)"><span>{{colorSet.title}}</span></a>
                         </li>
                     </ul>
                 </li>
@@ -36,22 +33,23 @@
                 </li>
             </ul>
         </div>
-        <div class="central-panel"></div>
+        <div class="central-panel">
+            <div class="separator"></div>
+            <div class="color-holder">
+                <div class="color" ng-style="{'background-color':color.color}">
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="color-caption">{{color.title}}</div>
+            <div class="separator"></div>
+        </div>
         <div class="panel bottom-panel">
             <ul>
-                <li class='has-sub'><a href='#'><span>Game Type</span></a>
-                    <ul>
-                        <li class='last'><a href='#'><span>Random Color</span></a>
-                        </li>
-                    </ul>
+                <li>
+                    <a href='#'><span>Hint</span></a>
                 </li>
-                <li class='has-sub'><a href='#'><span>Color Set</span></a>
-                    <ul>
-                        <li><a href='#'><span>Rainbow</span></a>
-                        </li>
-                        <li class='last'><a href='#'><span>Extreme</span></a>
-                        </li>
-                    </ul>
+                <li>
+                    <a href='#' ng-click="nextColor()"><span>Next</span></a>
                 </li>
             </ul>
         </div>

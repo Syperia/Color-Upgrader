@@ -1,0 +1,104 @@
+[
+    {
+        "title": "17 standard colors",
+        "colors": [
+            {
+                "title": "White",
+                "color": "#FFFFFF"
+            },
+            {
+                "title": "Silver",
+                "color": "#C0C0C0"
+            },
+            {
+                "title": "Gray",
+                "color": "#808080"
+            },
+            {
+                "title": "Black",
+                "color": "#000000"
+            },
+            {
+                "title": "Red",
+                "color": "#FF0000"
+            },
+            {
+                "title": "Maroon",
+                "color": "#800000"
+            },
+            {
+                "title": "Yellow",
+                "color": "#FFFF00"
+            },
+            {
+                "title": "Olive",
+                "color": "#808000"
+            },
+            {
+                "title": "Lime",
+                "color": "#00FF00"
+            },
+            {
+                "title": "Green",
+                "color": "#008000"
+            },
+            {
+                "title": "Aqua",
+                "color": "#00FFFF"
+            },
+            {
+                "title": "Teal",
+                "color": "#008080"
+            },
+            {
+                "title": "Blue",
+                "color": "#0000FF"
+            },
+            {
+                "title": "Navy",
+                "color": "#000080"
+            },
+            {
+                "title": "Fuchsia",
+                "color": "#FF00FF"
+            },
+            {
+                "title": "Purple",
+                "color": "#800080"
+            }
+        ]
+    },
+    {
+        "title": "Rainbow",
+        "colors": [
+            {
+                "title": "Red",
+                "color": "#FF0000"
+            },
+            {
+                "title": "Orange",
+                "color": "#FF7F00"
+            },
+            {
+                "title": "Yellow",
+                "color": "#FFFF00"
+            },
+            {
+                "title": "Green",
+                "color": "#00FF00"
+            },
+            {
+                "title": "Blue",
+                "color": "#0000FF"
+            },
+            {
+                "title": "Indigo",
+                "color": "#4B0082"
+            },
+            {
+                "title": "Violet",
+                "color": "#8F00FF"
+            }
+        ]
+    }
+]
